@@ -46,5 +46,6 @@ mod tests {
     fn pig() {
         assert_eq!(super::pig("hello"), "ellohay");
         assert_eq!(super::pig("apple"), "applehay");
+        assert_eq!(super::pig("はろー"), "ろーはay");
     }
 }
