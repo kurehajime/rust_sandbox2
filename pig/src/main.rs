@@ -30,11 +30,12 @@ fn pig(word: &str) -> String {
 
 fn slice(s: &str, range: Range<usize>) -> String {
     let mut result = String::new();
-
-    for (i, c) in s.char_indices() {
-        if i >= range.start && i < range.end {
+    let mut index = 0;
+    for (_, c) in s.char_indices() {
+        if index >= range.start && index < range.end {
             result.push_str(&c.to_string());
         }
+        index = index + 1;
     }
     result
 }
