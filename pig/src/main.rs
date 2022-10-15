@@ -13,21 +13,19 @@ fn main() {
 
 fn pig(word: &str) -> String {
     let aiueo = ['a', 'i', 'u', 'e', 'o'];
-    let pig_word: String;
     let top = word.chars().nth(0).unwrap();
     if aiueo.contains(&top) {
-        pig_word = word.to_owned() + "hay";
+        word.to_owned() + "hay"
     } else {
-        pig_word = slice(
+        slice(
             word,
             Range {
                 start: 1,
                 end: word.char_indices().count(),
             },
         ) + &top.to_string()
-            + "ay";
+            + "ay"
     }
-    pig_word
 }
 
 fn slice(s: &str, range: Range<usize>) -> String {
