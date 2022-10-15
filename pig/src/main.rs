@@ -16,7 +16,7 @@ fn pig(word: &str) -> String {
     let pig_word: String;
     let top = word.chars().nth(0).unwrap();
     if aiueo.contains(&top) {
-        pig_word = word.to_owned() + "-hay";
+        pig_word = word.to_owned() + "hay";
     } else {
         pig_word = slice(
             word,
