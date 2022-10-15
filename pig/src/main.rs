@@ -38,3 +38,12 @@ fn slice(s: &str, range: Range<usize>) -> String {
     }
     result
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn pig() {
+        assert_eq!(super::pig("hello"), "ellohay");
+        assert_eq!(super::pig("apple"), "applehay");
+    }
+}
