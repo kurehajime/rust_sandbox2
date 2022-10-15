@@ -17,14 +17,7 @@ fn pig(word: &str) -> String {
     if aiueo.contains(&top) {
         word.to_owned() + "hay"
     } else {
-        slice(
-            word,
-            Range {
-                start: 1,
-                end: word.char_indices().count(),
-            },
-        ) + &top.to_string()
-            + "ay"
+        slice(word, 1..word.char_indices().count()) + &top.to_string() + "ay"
     }
 }
 
