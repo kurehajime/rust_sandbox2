@@ -19,7 +19,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
+    fn 足し算() {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
